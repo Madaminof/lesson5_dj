@@ -1,0 +1,31 @@
+
+<h1>Kitob Haqida</h1>
+
+<body>
+    <img src="{{ product1.image.url }}"/><br>
+    name:{{ product1.name }}<br>
+    description:{{ product1.description }}<br>
+    Price:{{ product1.price }}<br>
+    Year: {{product1.year}}<hr/>
+    <h1>Author</h1>
+    name:  {{  product1.author.name}}<br>
+    surname:  {{  product1.author.surname}}<br>
+    year:  {{  product1.author.year}}<hr/>
+    
+
+    <h2>Review</h2>
+    <a href="{% url 'products:Get_Review' product1.pk%}" >Review</a><hr/>
+
+    <h2>Update</h2>
+    <a href="{% url 'products:update_products' product1.pk %}" >Update</a><hr/>
+
+
+    <h2>Delete</h2>
+    <a href="{% url 'products:delete_product' product1.pk %}" >Delete</a><hr/>
+
+
+
+    <h2>Home</h2>
+    <a href="{% url 'products:Get_Books_Category' %}" >home</a><br>
+
+</body>

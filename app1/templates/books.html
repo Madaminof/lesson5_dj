@@ -1,0 +1,20 @@
+
+<h3> Books </h3><br>
+
+<body>
+    {% for book in books %}
+    <a href="{% url 'products:detail' book.pk %}" >{{ book.name }}</a><br>
+
+    {% endfor %}
+
+
+
+    <a href="{% url 'products:Get_Books_Category' %}" >home</a><br>
+
+
+    
+   
+
+</body>
+
+

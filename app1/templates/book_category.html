@@ -1,0 +1,15 @@
+<title>Home Page</title>
+
+
+<h3> Books Categories</h3><br>
+
+<body>
+{% for c in books_categor %}
+    <a href="{% url 'products:Get_Books' c.pk  %}" >{{ c.names }}</a><br>
+{% endfor %}
+
+
+<a href="{% url 'products:add_products' %}" ><b>Add Products</b></a><br>
+
+
+</body>
